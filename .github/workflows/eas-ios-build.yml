@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Instalar dependências
+      - name: Instalar dependências do projeto
         run: npm install
 
-      - name: Instalar EAS CLI
+      - name: Instalar EAS CLI globalmente
         run: npm install -g eas-cli
 
       - name: Autenticar com Expo

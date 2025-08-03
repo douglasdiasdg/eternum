@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Instalar dependências
+        run: npm install
+
       - name: Instalar EAS CLI
         run: npm install -g eas-cli
 

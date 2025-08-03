@@ -22,7 +22,7 @@ jobs:
       - name: Autenticar com Expo
         run: eas whoami
         env:
-        EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Rodar build iOS
         run: eas build --platform ios --non-interactive --profile production

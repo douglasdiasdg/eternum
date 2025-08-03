@@ -19,8 +19,10 @@ jobs:
       - name: Instalar EAS CLI
         run: npm install -g eas-cli
 
-      - name: Autenticar na Expo
-        run: eas whoami || eas login --token ${{ secrets.EXPO_TOKEN }}
+      - name: Autenticar com Expo
+        run: eas whoami
+        env:
+        EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Rodar build iOS
         run: eas build --platform ios --non-interactive --profile production
